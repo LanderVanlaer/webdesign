@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: antiquewhite;
+}
+
+body.red {
+    color: red;
+    background-color: red;
+}
+
+body.blue {
+    color: blue;
+    background-color: blue;
+}
+
+body.yellow {
+    color: yellow;
+    background-color: yellow;
+}
+
+main,
+footer {
+    background-color: #43CA32;
+    width: 435px;
+    box-shadow: 5px 5px 10px black;
+    margin: 20px auto 0;
+}
+
+main {
+    padding: 15px 10px;
+    text-align: center;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+main section {
+    text-align: left;
+    box-shadow: inset 3px 5px 10px black;
+    background-color: lightgray;
+    border: 2px inset silver;
+    padding: 0 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+main section.colored {
+    background-color: yellow;
+}
+
+main section form fieldset {
+    padding: 20px;
+    border: 2px solid gray;
+}
+
+main section form fieldset legend {
+    text-align: center;
+}
+
+main section form fieldset table {
+    margin-bottom: 30px;
+}
+
+main section form fieldset table[border="1"] {
+    border-color: gray;
+    margin: 0 auto inherit;
+}
+
+main section form fieldset table[border="1"] tr td {
+    width: 170px;
+}
+
+main section form fieldset table[border="1"] tr td input {
+    border: none;
+}
+
+main section form fieldset table#slagen-bissen tr td:first-child {
+    width: 90px;
+}
+
+main section form fieldset table#studeer-voldoende tr td:first-child {
+    width: 145px;
+}
+
+main section form fieldset button[type="submit"] {
+    border: 2px outset #c2c2c2;
+    outline-width: 1px;
+    margin-bottom: 5px;
+}
+
+main section form fieldset button[type="submit"]:active {
+    border: 2px inset #c2c2c2;
+}
+
+main section form fieldset select#kleur-page {
+    display: block;
+}
+
+main section form fieldset+div {
+    text-align: center;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+main section.triple-box {
+    display: inline-block;
+    padding: 0;
+    width: 120px;
+    height: 120px;
+    margin-right: 15px;
+    background-color: white;
+}
+
+
+main section.triple-box:last-child {
+    margin-right: 0px;
+}
+
+main section.triple-box button {
+    display: block;
+    margin: 95px auto 0 auto;
+    padding: 2px 4px;
+    font-size: .75rem;
+    color: yellow;
+    background-color: purple;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+footer {
+    display: none;
+    text-align: center;
+    border-radius: 5px;
+    width: 455px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+footer.bim-bam div:first-child {
+    display: none;
+}
+
+footer div:last-child {
+    display: none;
+}
+
+footer.bim-bam div:last-child {
+    display: block;
+    color: white;
+}

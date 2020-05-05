@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <section>
+            <form>
+                <fieldset>
+                    <legend>Invulformulier</legend>
+                    <table border="1">
+                        <tr>
+                            <td>Naam en voornaam:</td>
+                            <td><input type="text" name="name" id="name"></td>
+                        </tr>
+                        <tr>
+                            <td>Postcode</td>
+                            <td><input type="text" name="postcode" id="postcode" maxlength="4"></td>
+                        </tr>
+                        <tr>
+                            <td>Email adres:</td>
+                            <td><input type="email" name="email" id="email"></td>
+                        </tr>
+                    </table>
+                    <table id="slagen-bissen">
+                        <tr>
+                            <td>Ik wil slagen:</td>
+                            <td><input type="checkbox" name="slagen" id="slagen"></td>
+                        </tr>
+                        <tr>
+                            <td>Ik wil bissen:</td>
+                            <td><input type="checkbox" name="bissen" id="bissen"></td>
+                        </tr>
+                    </table>
+                    <table id="studeer-voldoende">
+                        <tr>
+                            <td>Ik studeer voldoende:</td>
+                            <td><input type="radio" name="studeer-voldoende" value="false" checked> Nee</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><input type="radio" name="studeer-voldoende" value="true"> Ja</td>
+                        </tr>
+                    </table>
+                    <div id="studeer-voldoende">
+                        <div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <button type="submit">Verzend</button>
+                    <select name="kleur-page" id="kleur-page">
+                        <option value="default" selected>Selecteer een nieuwe tekst- en paginakleur</option>
+                        <option value="red">Rood</option>
+                        <option value="blue">Blauw</option>
+                        <option value="yellow">Geel</option>
+                    </select>
+                </fieldset>
+                <div>
+                    De velden hierboven mogen niet leeg zijn.<br>
+                    Volgende velden worden gecontroleerd op juiste ingave:<br>
+                    Postcode: max. 4 digits toestaan, email: apestaart en een punt erna
+                </div>
+            </form>
+        </section>
+        <section class="triple-box">
+            <button id="swap-colors">Swap colors</button>
+        </section>
+        <section class="triple-box">
+            <button id="show-footer">Show footer</button>
+        </section>
+        <section class="triple-box">
+            <button id="change-footer">Change footer</button>
+        </section>
+    </main>
+    <footer>
+        <div>&copy; Lander Van laer - toets webdesign 5INF - Mei 2020</div>
+        <div>Heilige BimBam, hier gaat het buizen regenen!</div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
