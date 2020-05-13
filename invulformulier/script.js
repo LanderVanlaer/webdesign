@@ -16,12 +16,28 @@ document.querySelector("#show-footer").addEventListener('click', function() {
 document.querySelector("#change-footer").addEventListener('click', () => document.querySelector("body > footer").classList.toggle('bim-bam'));
 
 document.forms[0].onsubmit = function(e) {
-    if (!/^\S+@\S+\.\S+$/.test(this.email.value)) /*test : (*@*.*))*/ {
-        alert('Gelieve een geldige mail door te sturen');
+    const throwErr = (err) => {
         e.preventDefault();
-    }
-    if (this.postcode.value.length > 4 || !this.postcode.value) {
-        alert('Gelieve een gelidige postcode in te vullen');
-        e.preventDefault();
-    }
+        alert(`Het formulier bevat volgende fouten: ${err}\nGa terug naar het formulier en verbeter!`);
+    };
+
+    if (!this.name.value) return throwErr(`Er werd geen naam ingevuld!`);
+
+    if (!this.postcode.value) return throwErr(`Er werd geen postcode ingevuld!`);
+
+    if (this.postcode.value.length > 4 || !this.postcode.value) return throwErr(`Gelieve een geldige postcode in te vullen!`);
+
+    if (!/^\S+@\S+\.\S+$/.test(this.email.value) /*test : %@%.% */ ) return throwErr(`Gelieve een geldig emailadres in te vullen!`);
+
+
+    //validated
+    const tab = window.open();
+    tab.document.write(
+        `<p>Je hebt volgende gegevens opgegeven:
+        Naam: ${this.name.value}
+        Postcode: ${this.postcode.value}
+        Emailadres: ${this.email.value}
+        Je studeert ${this.elements.studeer.value?"voldoende":"onvoldoende"}
+        ${this.slagen.checked?"Je wilt slagen.":""}
+        ${this.bissen.checked?"Je wilt bissen.":""}</p>`.replace(/\n/g, "\n<br>"));
 }
