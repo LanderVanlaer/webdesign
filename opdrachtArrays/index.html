@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const cars = [{
+            name: "Saab",
+            price: 20000
+        }, {
+            name: "Volvo",
+            price: 20000
+        }, {
+            name: "BMW",
+            price: 25000
+        }];
+        cars.forEach(({ name, price }, i) =>
+            document.write(`De ${++i}e auto uit mijn lijst is: ${name} en kost: ${price.toString().slice(0,-3)}.${price.toString().slice(-3)} euro<br>`));
+    </script>
+</body>
+
+</html>
